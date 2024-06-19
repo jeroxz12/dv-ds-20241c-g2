@@ -1,54 +1,104 @@
-2024-06-14 19:46:59,958 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
-2024-06-14 19:46:59,985 INFO o.s.b.StartupInfoLogger [restartedMain] Starting DvDs20241cG2Application using Java 21.0.2 with PID 27776 (C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2\target\classes started by USER in C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2)
-2024-06-14 19:46:59,985 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-14 19:46:59,985 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2024-06-14 19:47:00,013 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-14 19:47:00,014 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-14 19:47:00,605 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-14 19:47:00,643 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interface.
-2024-06-14 19:47:01,218 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
-2024-06-14 19:47:01,225 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2024-06-14 19:47:01,226 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2024-06-14 19:47:01,226 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-14 19:47:01,260 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-06-14 19:47:01,261 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1246 ms
-2024-06-14 19:47:01,347 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2024-06-14 19:47:01,500 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
-2024-06-14 19:47:01,502 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2024-06-14 19:47:01,509 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
-2024-06-14 19:47:01,628 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-14 19:47:01,672 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-06-14 19:47:01,696 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
-2024-06-14 19:47:01,876 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-14 19:47:01,900 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-06-14 19:47:01,996 WARN o.h.b.m.i.EntityBinder [restartedMain] HHH000457: Joined inheritance hierarchy [ar.edu.davinci.dv_ds_20241c_g2.domain.Venta] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2024-06-14 19:47:02,482 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-06-14 19:47:02,484 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 19:47:02,715 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-14 19:47:02,858 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
-2024-06-14 19:47:03,435 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: No schema scripts found at location 'classpath:/db/h2db/01-tablas.sql'
-2024-06-14 19:47:03,436 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 19:47:03,444 WARN o.s.b.f.s.DisposableBeanAdapter [restartedMain] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-06-14 19:47:03,444 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
-2024-06-14 19:47:03,446 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
-2024-06-14 19:47:03,448 INFO o.a.j.l.DirectJDKLog [restartedMain] Stopping service [Tomcat]
-2024-06-14 19:47:03,459 INFO o.s.b.a.l.ConditionEvaluationReportLogger [restartedMain] 
+2024-06-18 21:40:04,546 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 21:40:04,587 INFO o.s.b.StartupInfoLogger [restartedMain] Starting DvDs20241cG2Application using Java 21.0.2 with PID 183840 (C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2\target\classes started by USER in C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2)
+2024-06-18 21:40:04,588 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-18 21:40:04,589 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-06-18 21:40:04,619 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-18 21:40:04,620 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-18 21:40:05,559 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 21:40:05,630 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 64 ms. Found 6 JPA repository interfaces.
+2024-06-18 21:40:06,320 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8090 (http)
+2024-06-18 21:40:06,329 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8090"]
+2024-06-18 21:40:06,331 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-06-18 21:40:06,331 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-18 21:40:06,366 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-06-18 21:40:06,367 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1746 ms
+2024-06-18 21:40:06,466 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-06-18 21:40:07,711 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 21:40:07,770 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-18 21:40:07,799 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-06-18 21:40:08,043 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 21:40:08,062 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-06-18 21:40:09,086 WARN o.h.e.j.e.i.JdbcEnvironmentInitiator [restartedMain] HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:290)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at ar.edu.davinci.dv_ds_20241c_g2.DvDs20241cG2Application.main(DvDs20241cG2Application.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2024-06-18 21:40:09,100 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 21:40:09,101 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-06-18 21:40:09,111 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@63716418) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@28312b96)
+2024-06-18 21:40:09,111 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3a2eb857) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5c7067ca)
+2024-06-18 21:40:09,111 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@34c999f8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1505796c)
+2024-06-18 21:40:09,113 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5a26979b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5b7f522)
+2024-06-18 21:40:09,113 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7d49aa35) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@43b962e9)
+2024-06-18 21:40:09,113 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2dcdaf4a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@17695134)
+2024-06-18 21:40:09,113 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@27c159ee) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2f67d9d5)
+2024-06-18 21:40:09,113 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6f90948c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@32ad88bb)
+2024-06-18 21:40:09,113 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1f8eb929) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@e36727c)
+2024-06-18 21:40:09,211 WARN o.h.b.m.i.EntityBinder [restartedMain] HHH000457: Joined inheritance hierarchy [ar.edu.davinci.dv_ds_20241c_g2.domain.Venta] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2024-06-18 21:40:09,741 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 21:40:09,751 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-06-18 21:40:10,764 WARN o.h.e.j.s.SqlExceptionHelper [restartedMain] SQL Error: 0, SQLState: 08S01
+2024-06-18 21:40:10,764 ERROR o.h.e.j.s.SqlExceptionHelper [restartedMain] Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-06-18 21:40:10,767 ERROR o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2024-06-18 21:40:10,768 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2024-06-18 21:40:10,769 INFO o.a.j.l.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2024-06-18 21:40:10,779 INFO o.s.b.a.l.ConditionEvaluationReportLogger [restartedMain] 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-06-14 19:47:03,470 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: No schema scripts found at location 'classpath:/db/h2db/01-tablas.sql'
+2024-06-18 21:40:10,792 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
@@ -60,183 +110,26 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.lang.IllegalStateException: No schema scripts found at location 'classpath:/db/h2db/01-tablas.sql'
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.getScripts(AbstractScriptDatabaseInitializer.java:129)
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:106)
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applySchemaScripts(AbstractScriptDatabaseInitializer.java:98)
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76)
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
-	... 21 common frames omitted
-2024-06-14 20:35:02,827 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
-2024-06-14 20:35:02,854 INFO o.s.b.StartupInfoLogger [restartedMain] Starting DvDs20241cG2Application using Java 21.0.2 with PID 41424 (C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2\target\classes started by USER in C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2)
-2024-06-14 20:35:02,854 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-14 20:35:02,854 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2024-06-14 20:35:02,882 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-14 20:35:02,882 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-14 20:35:03,599 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-14 20:35:03,659 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 55 ms. Found 6 JPA repository interfaces.
-2024-06-14 20:35:04,258 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
-2024-06-14 20:35:04,265 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2024-06-14 20:35:04,267 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2024-06-14 20:35:04,267 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-14 20:35:04,303 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-06-14 20:35:04,304 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1420 ms
-2024-06-14 20:35:04,395 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2024-06-14 20:35:04,532 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
-2024-06-14 20:35:04,534 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2024-06-14 20:35:04,542 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
-2024-06-14 20:35:04,674 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-14 20:35:04,719 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-06-14 20:35:04,746 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
-2024-06-14 20:35:04,959 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-14 20:35:04,992 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-06-14 20:35:05,097 WARN o.h.b.m.i.EntityBinder [restartedMain] HHH000457: Joined inheritance hierarchy [ar.edu.davinci.dv_ds_20241c_g2.domain.Venta] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2024-06-14 20:35:05,637 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-06-14 20:35:05,638 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:35:05,944 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-14 20:35:06,114 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
-2024-06-14 20:35:06,734 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: No schema scripts found at location 'classpath:/db/h2db/01-tablas.sql'
-2024-06-14 20:35:06,737 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:35:06,747 WARN o.s.b.f.s.DisposableBeanAdapter [restartedMain] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
-2024-06-14 20:35:06,748 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
-2024-06-14 20:35:06,750 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
-2024-06-14 20:35:06,752 INFO o.a.j.l.DirectJDKLog [restartedMain] Stopping service [Tomcat]
-2024-06-14 20:35:06,766 INFO o.s.b.a.l.ConditionEvaluationReportLogger [restartedMain] 
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
 
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-06-14 20:35:06,780 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: No schema scripts found at location 'classpath:/db/h2db/01-tablas.sql'
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at ar.edu.davinci.dv_ds_20241c_g2.DvDs20241cG2Application.main(DvDs20241cG2Application.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.lang.IllegalStateException: No schema scripts found at location 'classpath:/db/h2db/01-tablas.sql'
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.getScripts(AbstractScriptDatabaseInitializer.java:129)
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:106)
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applySchemaScripts(AbstractScriptDatabaseInitializer.java:98)
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76)
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
-	... 21 common frames omitted
-2024-06-14 20:44:16,614 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
-2024-06-14 20:44:16,640 INFO o.s.b.StartupInfoLogger [restartedMain] Starting DvDs20241cG2Application using Java 21.0.2 with PID 43632 (C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2\target\classes started by USER in C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2)
-2024-06-14 20:44:16,641 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-14 20:44:16,641 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2024-06-14 20:44:16,670 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-14 20:44:16,670 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-14 20:44:17,375 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-14 20:44:17,432 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 51 ms. Found 6 JPA repository interfaces.
-2024-06-14 20:44:18,081 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8090 (http)
-2024-06-14 20:44:18,090 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:44:18,092 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2024-06-14 20:44:18,092 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-14 20:44:18,125 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-06-14 20:44:18,126 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1455 ms
-2024-06-14 20:44:18,228 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2024-06-14 20:44:18,365 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@361ba0e8
-2024-06-14 20:44:18,366 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2024-06-14 20:44:18,371 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/dv-ds-20241c-g2'
-2024-06-14 20:44:18,514 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-14 20:44:18,563 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-06-14 20:44:18,596 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
-2024-06-14 20:44:18,790 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-14 20:44:18,821 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-06-14 20:44:18,822 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-06-14 20:44:18,832 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7e65a06d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1d92afe8)
-2024-06-14 20:44:18,832 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@548f234c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@87ec058)
-2024-06-14 20:44:18,833 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5b4b6ff2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@53ae669c)
-2024-06-14 20:44:18,833 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7e16bae6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@94c97c)
-2024-06-14 20:44:18,833 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@a01263) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@201a1e6d)
-2024-06-14 20:44:18,833 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6b104102) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4de9ba35)
-2024-06-14 20:44:18,833 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4d5a8ae1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3dc30c51)
-2024-06-14 20:44:18,833 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@543252ba) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@540a721b)
-2024-06-14 20:44:18,833 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4d1ef7f9) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@681adb8f)
-2024-06-14 20:44:18,923 WARN o.h.b.m.i.EntityBinder [restartedMain] HHH000457: Joined inheritance hierarchy [ar.edu.davinci.dv_ds_20241c_g2.domain.Venta] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2024-06-14 20:44:19,409 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-06-14 20:44:19,411 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:44:19,726 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-14 20:44:19,900 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
-2024-06-14 20:44:20,501 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2024-06-14 20:44:20,509 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 14 endpoints beneath base path '/actuator'
-2024-06-14 20:44:20,562 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:44:20,572 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8090 (http) with context path '/'
-2024-06-14 20:44:20,580 INFO o.s.b.StartupInfoLogger [restartedMain] Started DvDs20241cG2Application in 4.297 seconds (process running for 4.659)
-2024-06-14 20:44:34,413 INFO o.a.j.l.DirectJDKLog [http-nio-8090-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-14 20:44:34,413 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-2] Initializing Servlet 'dispatcherServlet'
-2024-06-14 20:44:34,414 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-2] Completed initialization in 1 ms
-2024-06-14 20:44:34,481 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-2] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:44:34,538 WARN o.h.e.j.s.SqlExceptionHelper [http-nio-8090-exec-2] SQL Error: 1146, SQLState: 42S02
-2024-06-14 20:44:34,538 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8090-exec-2] Table 'dv-ds-20241c-g2.prendas' doesn't exist
-2024-06-14 20:44:34,546 ERROR a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-2] could not execute statement [Table 'dv-ds-20241c-g2.prendas' doesn't exist] [insert into prendas (prd_descripcion,prd_precio_base,prd_tipo_prenda) values (?,?,?)]; SQL [insert into prendas (prd_descripcion,prd_precio_base,prd_tipo_prenda) values (?,?,?)]
-2024-06-14 20:45:00,162 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:45:00,165 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-06-14 20:45:00,171 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-14 20:45:02,685 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
-2024-06-14 20:45:02,710 INFO o.s.b.StartupInfoLogger [restartedMain] Starting DvDs20241cG2Application using Java 21.0.2 with PID 37420 (C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2\target\classes started by USER in C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2)
-2024-06-14 20:45:02,710 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-14 20:45:02,712 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2024-06-14 20:45:02,741 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-14 20:45:02,741 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-14 20:45:03,477 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-14 20:45:03,540 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 56 ms. Found 6 JPA repository interfaces.
-2024-06-14 20:45:04,168 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8090 (http)
-2024-06-14 20:45:04,178 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:45:04,179 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2024-06-14 20:45:04,179 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-14 20:45:04,219 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-06-14 20:45:04,221 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1477 ms
-2024-06-14 20:45:04,323 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2024-06-14 20:45:04,448 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78b8c07f
-2024-06-14 20:45:04,449 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2024-06-14 20:45:04,457 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/dv-ds-20241c-g2'
-2024-06-14 20:45:04,599 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-14 20:45:04,641 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-06-14 20:45:04,668 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
-2024-06-14 20:45:04,892 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-14 20:45:04,925 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-06-14 20:45:04,926 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-06-14 20:45:04,939 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6c075b90) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1b8d89f7)
-2024-06-14 20:45:04,939 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@201b2331) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2d22410d)
-2024-06-14 20:45:04,939 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7b2f44e2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@c9aa841)
-2024-06-14 20:45:04,939 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@75611048) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4a741dc0)
-2024-06-14 20:45:04,939 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4bfd4838) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@127c29a6)
-2024-06-14 20:45:04,939 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6fe288f1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@59212d0)
-2024-06-14 20:45:04,939 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@240f26d2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@574d0aec)
-2024-06-14 20:45:04,940 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2c13a5f4) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@39822634)
-2024-06-14 20:45:04,940 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@64e6ae60) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5bc3d27a)
-2024-06-14 20:45:05,038 WARN o.h.b.m.i.EntityBinder [restartedMain] HHH000457: Joined inheritance hierarchy [ar.edu.davinci.dv_ds_20241c_g2.domain.Venta] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2024-06-14 20:45:05,612 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-06-14 20:45:05,652 WARN o.h.t.s.i.ExceptionHandlerLoggedImpl [restartedMain] GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table venta_items 
-       drop 
-       foreign key FKfgywqxeoeoldymmmbpvn6i84f" via JDBC [Table 'dv-ds-20241c-g2.venta_items' doesn't exist]
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table venta_items 
-       drop 
-       foreign key FKfgywqxeoeoldymmmbpvn6i84f" via JDBC [Table 'dv-ds-20241c-g2.venta_items' doesn't exist]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	... 18 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.getIsolatedConnection(GenerationTargetToDatabase.java:60)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.jdbcStatement(GenerationTargetToDatabase.java:112)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:79)
 	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
 	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:476)
@@ -257,309 +150,117 @@ org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
 	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at ar.edu.davinci.dv_ds_20241c_g2.DvDs20241cG2Application.main(DvDs20241cG2Application.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.sql.SQLSyntaxErrorException: Table 'dv-ds-20241c-g2.venta_items' doesn't exist
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
-	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
-	... 42 common frames omitted
-2024-06-14 20:45:05,655 WARN o.h.t.s.i.ExceptionHandlerLoggedImpl [restartedMain] GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table venta_items 
-       drop 
-       foreign key FKtbgs9hbsr59pkc6ofpjbrurs9" via JDBC [Table 'dv-ds-20241c-g2.venta_items' doesn't exist]
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table venta_items 
-       drop 
-       foreign key FKtbgs9hbsr59pkc6ofpjbrurs9" via JDBC [Table 'dv-ds-20241c-g2.venta_items' doesn't exist]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
-	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
-	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:476)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
-	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
-	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at ar.edu.davinci.dv_ds_20241c_g2.DvDs20241cG2Application.main(DvDs20241cG2Application.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.sql.SQLSyntaxErrorException: Table 'dv-ds-20241c-g2.venta_items' doesn't exist
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
-	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
-	... 42 common frames omitted
-2024-06-14 20:45:05,656 WARN o.h.t.s.i.ExceptionHandlerLoggedImpl [restartedMain] GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ventas 
-       drop 
-       foreign key FKkv9l85lxca5152u9ox6qd60s1" via JDBC [Table 'dv-ds-20241c-g2.ventas' doesn't exist]
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ventas 
-       drop 
-       foreign key FKkv9l85lxca5152u9ox6qd60s1" via JDBC [Table 'dv-ds-20241c-g2.ventas' doesn't exist]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
-	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
-	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:476)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
-	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
-	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at ar.edu.davinci.dv_ds_20241c_g2.DvDs20241cG2Application.main(DvDs20241cG2Application.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.sql.SQLSyntaxErrorException: Table 'dv-ds-20241c-g2.ventas' doesn't exist
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
-	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
-	... 42 common frames omitted
-2024-06-14 20:45:05,656 WARN o.h.t.s.i.ExceptionHandlerLoggedImpl [restartedMain] GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ventas_efectivo 
-       drop 
-       foreign key FKbdu5605ie0syo90veofm9y85b" via JDBC [Table 'dv-ds-20241c-g2.ventas_efectivo' doesn't exist]
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ventas_efectivo 
-       drop 
-       foreign key FKbdu5605ie0syo90veofm9y85b" via JDBC [Table 'dv-ds-20241c-g2.ventas_efectivo' doesn't exist]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
-	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
-	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:476)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
-	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
-	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at ar.edu.davinci.dv_ds_20241c_g2.DvDs20241cG2Application.main(DvDs20241cG2Application.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.sql.SQLSyntaxErrorException: Table 'dv-ds-20241c-g2.ventas_efectivo' doesn't exist
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
-	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
-	... 42 common frames omitted
-2024-06-14 20:45:05,657 WARN o.h.t.s.i.ExceptionHandlerLoggedImpl [restartedMain] GenerationTarget encountered exception accepting command : Error executing DDL "
-    alter table ventas_tarjeta 
-       drop 
-       foreign key FKlrpprn5pkgb0tc6cpj7xfxd40" via JDBC [Table 'dv-ds-20241c-g2.ventas_tarjeta' doesn't exist]
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
-    alter table ventas_tarjeta 
-       drop 
-       foreign key FKlrpprn5pkgb0tc6cpj7xfxd40" via JDBC [Table 'dv-ds-20241c-g2.ventas_tarjeta' doesn't exist]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
-	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
-	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:476)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
-	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
-	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
-	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at ar.edu.davinci.dv_ds_20241c_g2.DvDs20241cG2Application.main(DvDs20241cG2Application.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: java.sql.SQLSyntaxErrorException: Table 'dv-ds-20241c-g2.ventas_tarjeta' doesn't exist
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
-	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
-	... 42 common frames omitted
-2024-06-14 20:45:05,818 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:45:06,173 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-14 20:45:06,371 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
-2024-06-14 20:45:07,024 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2024-06-14 20:45:07,037 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 14 endpoints beneath base path '/actuator'
-2024-06-14 20:45:07,089 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:45:07,102 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8090 (http) with context path '/'
-2024-06-14 20:45:07,116 INFO o.s.b.StartupInfoLogger [restartedMain] Started DvDs20241cG2Application in 4.756 seconds (process running for 5.103)
-2024-06-14 20:45:29,336 INFO o.a.j.l.DirectJDKLog [http-nio-8090-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-14 20:45:29,337 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-2] Initializing Servlet 'dispatcherServlet'
-2024-06-14 20:45:29,337 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-2] Completed initialization in 0 ms
-2024-06-14 20:45:29,393 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-2] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:46:48,052 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-6] lista al prenda solicitado
-2024-06-14 20:46:48,052 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-6] Buscamos a la prenda por id: 1
-2024-06-14 20:47:17,460 ERROR a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-9] No enum constant ar.edu.davinci.dv_ds_20241c_g2.domain.TipoPrenda.Polo
-2024-06-14 20:47:17,461 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-9] Buscamos a la prenda por id: 1
-2024-06-14 20:47:17,466 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-9] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null
-	at ar.edu.davinci.dv_ds_20241c_g2.controller.rest.PrendaControllerRest.updatePrenda(PrendaControllerRest.java:222)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	... 22 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:437)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 45 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 58 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 61 common frames omitted
+2024-06-18 21:41:23,866 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 21:41:23,891 INFO o.s.b.StartupInfoLogger [restartedMain] Starting DvDs20241cG2Application using Java 21.0.2 with PID 185596 (C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2\target\classes started by USER in C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2)
+2024-06-18 21:41:23,891 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-18 21:41:23,892 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-06-18 21:41:23,919 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-18 21:41:23,919 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-18 21:41:24,599 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 21:41:24,652 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 48 ms. Found 6 JPA repository interfaces.
+2024-06-18 21:41:25,229 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8090 (http)
+2024-06-18 21:41:25,236 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8090"]
+2024-06-18 21:41:25,237 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-06-18 21:41:25,237 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-18 21:41:25,267 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-06-18 21:41:25,267 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1347 ms
+2024-06-18 21:41:25,350 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-06-18 21:41:25,475 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@533fcc9f
+2024-06-18 21:41:25,477 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-06-18 21:41:25,483 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/dv-ds-20241c-g2'
+2024-06-18 21:41:25,611 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 21:41:25,657 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-18 21:41:25,679 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-06-18 21:41:25,889 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 21:41:25,917 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 21:41:25,917 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-06-18 21:41:25,929 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5fd3f956) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@364f86ec)
+2024-06-18 21:41:25,929 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@16f32fcb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@71871028)
+2024-06-18 21:41:25,929 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@31de5e07) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7becd636)
+2024-06-18 21:41:25,929 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@746e33f7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3da17b02)
+2024-06-18 21:41:25,929 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7ecc34d7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@630c005e)
+2024-06-18 21:41:25,929 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@66786643) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@503778e5)
+2024-06-18 21:41:25,929 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4f4294b8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4ccf63fe)
+2024-06-18 21:41:25,929 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@69204e5a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@23be3cb)
+2024-06-18 21:41:25,929 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@59874060) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6ee0183d)
+2024-06-18 21:41:26,015 WARN o.h.b.m.i.EntityBinder [restartedMain] HHH000457: Joined inheritance hierarchy [ar.edu.davinci.dv_ds_20241c_g2.domain.Venta] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2024-06-18 21:41:26,486 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 21:41:26,723 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 21:41:27,026 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 21:41:27,183 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
+2024-06-18 21:41:27,778 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-06-18 21:41:27,785 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 14 endpoints beneath base path '/actuator'
+2024-06-18 21:41:27,829 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8090"]
+2024-06-18 21:41:27,839 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8090 (http) with context path '/'
+2024-06-18 21:41:27,847 INFO o.s.b.StartupInfoLogger [restartedMain] Started DvDs20241cG2Application in 4.263 seconds (process running for 4.57)
+2024-06-18 21:41:43,976 INFO o.a.j.l.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-18 21:41:43,977 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-18 21:41:43,978 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 1 ms
+2024-06-18 21:41:50,322 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-4] GET - showClientePage  - /clientes/list
+2024-06-18 21:41:50,322 DEBUG a.e.d.d.s.i.ClienteServiceImpl [http-nio-8090-exec-4] Listado de todas las clientes por páginas
+2024-06-18 21:41:50,324 DEBUG a.e.d.d.s.i.ClienteServiceImpl [http-nio-8090-exec-4] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
+2024-06-18 21:41:50,425 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-4] clientes.size: 0
+2024-06-18 21:41:50,431 ERROR o.t.TemplateEngine [http-nio-8090-exec-4] [THYMELEAF][http-nio-8090-exec-4] Exception processing template "clientes/list_clientes": Error resolving template [clientes/list_clientes], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [clientes/list_clientes], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -599,24 +300,21 @@ java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.do
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-06-14 20:48:31,779 ERROR a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-1] No enum constant ar.edu.davinci.dv_ds_20241c_g2.domain.TipoPrenda.Camisa
-2024-06-14 20:48:31,779 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-1] Buscamos a la prenda por id: 1
-2024-06-14 20:48:31,782 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null
-	at ar.edu.davinci.dv_ds_20241c_g2.controller.rest.PrendaControllerRest.updatePrenda(PrendaControllerRest.java:222)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2024-06-18 21:41:50,433 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [clientes/list_clientes], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [clientes/list_clientes], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -656,24 +354,25 @@ java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.do
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-06-14 20:48:37,179 ERROR a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-3] No enum constant ar.edu.davinci.dv_ds_20241c_g2.domain.TipoPrenda.Camisa
-2024-06-14 20:48:37,180 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-3] Buscamos a la prenda por id: 1
-2024-06-14 20:48:37,182 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null
-	at ar.edu.davinci.dv_ds_20241c_g2.controller.rest.PrendaControllerRest.updatePrenda(PrendaControllerRest.java:222)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2024-06-18 21:42:45,038 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-6] GET - showPrendaPage  - /prendas/list
+2024-06-18 21:42:45,038 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-6] Listado de todas las prendas por páginas
+2024-06-18 21:42:45,039 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-6] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
+2024-06-18 21:42:45,049 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-6] prendas.size: 12
+2024-06-18 21:42:45,051 ERROR o.t.TemplateEngine [http-nio-8090-exec-6] [THYMELEAF][http-nio-8090-exec-6] Exception processing template "prendas/list_prendas": Error resolving template [prendas/list_prendas], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [prendas/list_prendas], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -713,24 +412,21 @@ java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.do
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-06-14 20:48:37,792 ERROR a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-4] No enum constant ar.edu.davinci.dv_ds_20241c_g2.domain.TipoPrenda.Camisa
-2024-06-14 20:48:37,792 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-4] Buscamos a la prenda por id: 1
-2024-06-14 20:48:37,794 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null
-	at ar.edu.davinci.dv_ds_20241c_g2.controller.rest.PrendaControllerRest.updatePrenda(PrendaControllerRest.java:222)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2024-06-18 21:42:45,052 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [prendas/list_prendas], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [prendas/list_prendas], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -770,24 +466,25 @@ java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.do
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-06-14 20:48:38,168 ERROR a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-8] No enum constant ar.edu.davinci.dv_ds_20241c_g2.domain.TipoPrenda.Camisa
-2024-06-14 20:48:38,168 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-8] Buscamos a la prenda por id: 1
-2024-06-14 20:48:38,171 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-8] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null
-	at ar.edu.davinci.dv_ds_20241c_g2.controller.rest.PrendaControllerRest.updatePrenda(PrendaControllerRest.java:222)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2024-06-18 21:44:13,434 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-6] GET - showPrendaPage  - /prendas/list
+2024-06-18 21:44:13,435 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-6] Listado de todas las prendas por páginas
+2024-06-18 21:44:13,435 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-6] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
+2024-06-18 21:44:13,438 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-6] prendas.size: 12
+2024-06-18 21:44:13,439 ERROR o.t.TemplateEngine [http-nio-8090-exec-6] [THYMELEAF][http-nio-8090-exec-6] Exception processing template "prendas/list_prendas": Error resolving template [prendas/list_prendas], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [prendas/list_prendas], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -827,24 +524,21 @@ java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.do
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-06-14 20:48:38,489 ERROR a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-9] No enum constant ar.edu.davinci.dv_ds_20241c_g2.domain.TipoPrenda.Camisa
-2024-06-14 20:48:38,490 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-9] Buscamos a la prenda por id: 1
-2024-06-14 20:48:38,493 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-9] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null
-	at ar.edu.davinci.dv_ds_20241c_g2.controller.rest.PrendaControllerRest.updatePrenda(PrendaControllerRest.java:222)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2024-06-18 21:44:13,440 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [prendas/list_prendas], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [prendas/list_prendas], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
@@ -884,419 +578,106 @@ java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.do
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-06-14 20:50:49,981 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:50:49,983 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-06-14 20:50:49,988 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-14 20:50:52,995 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
-2024-06-14 20:50:53,025 INFO o.s.b.StartupInfoLogger [restartedMain] Starting DvDs20241cG2Application using Java 21.0.2 with PID 37456 (C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2\target\classes started by USER in C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2)
-2024-06-14 20:50:53,025 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-14 20:50:53,025 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2024-06-14 20:50:53,055 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-14 20:50:53,055 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-14 20:50:53,828 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-14 20:50:53,887 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 53 ms. Found 6 JPA repository interfaces.
-2024-06-14 20:50:54,499 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8090 (http)
-2024-06-14 20:50:54,509 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:50:54,511 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2024-06-14 20:50:54,511 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-14 20:50:54,550 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-06-14 20:50:54,553 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1495 ms
-2024-06-14 20:50:54,650 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2024-06-14 20:50:54,769 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ee1dece
-2024-06-14 20:50:54,772 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2024-06-14 20:50:54,777 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/dv-ds-20241c-g2'
-2024-06-14 20:50:54,915 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-14 20:50:54,961 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-06-14 20:50:54,994 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
-2024-06-14 20:50:55,217 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-14 20:50:55,250 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-06-14 20:50:55,251 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-06-14 20:50:55,263 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@49ea4780) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3c43ed5f)
-2024-06-14 20:50:55,264 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6e16035) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@33d5d34b)
-2024-06-14 20:50:55,264 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@289854f6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@b126daf)
-2024-06-14 20:50:55,264 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6ff5430) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1bad802f)
-2024-06-14 20:50:55,264 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@71784848) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@691f2cdd)
-2024-06-14 20:50:55,264 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@153dab1a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6266fd6a)
-2024-06-14 20:50:55,264 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@51efd366) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@41066442)
-2024-06-14 20:50:55,264 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@399b6203) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6cc345f7)
-2024-06-14 20:50:55,265 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4398cfea) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@314e87af)
-2024-06-14 20:50:55,367 WARN o.h.b.m.i.EntityBinder [restartedMain] HHH000457: Joined inheritance hierarchy [ar.edu.davinci.dv_ds_20241c_g2.domain.Venta] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2024-06-14 20:50:55,899 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-06-14 20:50:56,166 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:50:56,503 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-14 20:50:56,695 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
-2024-06-14 20:50:57,385 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2024-06-14 20:50:57,392 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 14 endpoints beneath base path '/actuator'
-2024-06-14 20:50:57,436 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:50:57,448 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8090 (http) with context path '/'
-2024-06-14 20:50:57,459 INFO o.s.b.StartupInfoLogger [restartedMain] Started DvDs20241cG2Application in 4.8 seconds (process running for 5.158)
-2024-06-14 20:51:02,991 INFO o.a.j.l.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-14 20:51:02,991 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
-2024-06-14 20:51:02,992 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 1 ms
-2024-06-14 20:51:03,054 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-1] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:51:21,556 ERROR a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-3] Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.toString()" because "prendaNuevo" is null
-2024-06-14 20:51:21,557 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-3] Buscamos a la prenda por id: 1
-2024-06-14 20:51:21,575 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null
-	at ar.edu.davinci.dv_ds_20241c_g2.controller.rest.PrendaControllerRest.updatePrenda(PrendaControllerRest.java:223)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-06-14 20:53:07,354 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:53:07,357 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-06-14 20:53:07,363 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-14 20:53:09,797 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
-2024-06-14 20:53:09,821 INFO o.s.b.StartupInfoLogger [restartedMain] Starting DvDs20241cG2Application using Java 21.0.2 with PID 39396 (C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2\target\classes started by USER in C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2)
-2024-06-14 20:53:09,821 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-14 20:53:09,822 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2024-06-14 20:53:09,852 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-14 20:53:09,853 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-14 20:53:10,576 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-14 20:53:10,634 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 52 ms. Found 6 JPA repository interfaces.
-2024-06-14 20:53:11,241 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8090 (http)
-2024-06-14 20:53:11,250 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:53:11,253 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2024-06-14 20:53:11,253 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-14 20:53:11,289 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-06-14 20:53:11,289 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1436 ms
-2024-06-14 20:53:11,379 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2024-06-14 20:53:11,498 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@587ff271
-2024-06-14 20:53:11,499 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2024-06-14 20:53:11,505 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/dv-ds-20241c-g2'
-2024-06-14 20:53:11,631 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-14 20:53:11,676 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-06-14 20:53:11,717 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
-2024-06-14 20:53:11,917 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-14 20:53:11,944 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-06-14 20:53:11,945 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-06-14 20:53:11,956 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@39bc9d3c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2e49398e)
-2024-06-14 20:53:11,956 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@28f3ae48) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2542b35e)
-2024-06-14 20:53:11,957 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@784a9fb7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1fa85c79)
-2024-06-14 20:53:11,957 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2a1c302a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1af4ae74)
-2024-06-14 20:53:11,957 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@366f3dba) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6b79e49a)
-2024-06-14 20:53:11,957 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@202f14bf) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1f1789c0)
-2024-06-14 20:53:11,957 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@50dae575) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@742386c0)
-2024-06-14 20:53:11,957 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2c71fe17) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@f8b2bd0)
-2024-06-14 20:53:11,957 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@8fd8619) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@60001440)
-2024-06-14 20:53:12,052 WARN o.h.b.m.i.EntityBinder [restartedMain] HHH000457: Joined inheritance hierarchy [ar.edu.davinci.dv_ds_20241c_g2.domain.Venta] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2024-06-14 20:53:12,573 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-06-14 20:53:12,801 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:53:13,115 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-14 20:53:13,290 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
-2024-06-14 20:53:13,923 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2024-06-14 20:53:13,932 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 14 endpoints beneath base path '/actuator'
-2024-06-14 20:53:13,972 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:53:13,981 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8090 (http) with context path '/'
-2024-06-14 20:53:14,001 INFO o.s.b.StartupInfoLogger [restartedMain] Started DvDs20241cG2Application in 4.519 seconds (process running for 4.856)
-2024-06-14 20:53:30,605 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:53:30,607 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-06-14 20:53:30,612 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-14 20:53:32,818 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
-2024-06-14 20:53:32,843 INFO o.s.b.StartupInfoLogger [restartedMain] Starting DvDs20241cG2Application using Java 21.0.2 with PID 41916 (C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2\target\classes started by USER in C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2)
-2024-06-14 20:53:32,843 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-14 20:53:32,844 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2024-06-14 20:53:32,870 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-14 20:53:32,870 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-14 20:53:33,540 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-14 20:53:33,595 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 49 ms. Found 6 JPA repository interfaces.
-2024-06-14 20:53:34,170 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8090 (http)
-2024-06-14 20:53:34,178 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:53:34,179 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2024-06-14 20:53:34,179 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-14 20:53:34,216 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-06-14 20:53:34,217 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1347 ms
-2024-06-14 20:53:34,317 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2024-06-14 20:53:34,435 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6853313f
-2024-06-14 20:53:34,437 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2024-06-14 20:53:34,442 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/dv-ds-20241c-g2'
-2024-06-14 20:53:34,573 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-14 20:53:34,614 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-06-14 20:53:34,636 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
-2024-06-14 20:53:34,837 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-14 20:53:34,865 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-06-14 20:53:34,866 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-06-14 20:53:34,876 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@12c65b5d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7e232603)
-2024-06-14 20:53:34,876 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5fd3f956) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@364f86ec)
-2024-06-14 20:53:34,876 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@16f32fcb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@71871028)
-2024-06-14 20:53:34,876 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@31de5e07) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7becd636)
-2024-06-14 20:53:34,876 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@746e33f7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3da17b02)
-2024-06-14 20:53:34,876 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7ecc34d7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@630c005e)
-2024-06-14 20:53:34,876 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@66786643) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@503778e5)
-2024-06-14 20:53:34,876 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4f4294b8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4ccf63fe)
-2024-06-14 20:53:34,876 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@69204e5a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@23be3cb)
-2024-06-14 20:53:34,963 WARN o.h.b.m.i.EntityBinder [restartedMain] HHH000457: Joined inheritance hierarchy [ar.edu.davinci.dv_ds_20241c_g2.domain.Venta] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2024-06-14 20:53:35,430 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-06-14 20:53:35,651 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:53:35,986 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-14 20:53:36,155 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
-2024-06-14 20:53:36,736 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2024-06-14 20:53:36,743 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 14 endpoints beneath base path '/actuator'
-2024-06-14 20:53:36,786 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:53:36,795 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8090 (http) with context path '/'
-2024-06-14 20:53:36,805 INFO o.s.b.StartupInfoLogger [restartedMain] Started DvDs20241cG2Application in 4.28 seconds (process running for 4.602)
-2024-06-14 20:53:41,224 INFO o.a.j.l.DirectJDKLog [http-nio-8090-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-14 20:53:41,224 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-2] Initializing Servlet 'dispatcherServlet'
-2024-06-14 20:53:41,225 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-2] Completed initialization in 1 ms
-2024-06-14 20:53:41,288 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-2] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:54:00,398 ERROR a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-3] No enum constant ar.edu.davinci.dv_ds_20241c_g2.domain.TipoPrenda.Camisa
-2024-06-14 20:54:00,399 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-3] Buscamos a la prenda por id: 1
-2024-06-14 20:54:00,423 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null
-	at ar.edu.davinci.dv_ds_20241c_g2.controller.rest.PrendaControllerRest.updatePrenda(PrendaControllerRest.java:222)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-06-14 20:54:31,369 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-5] Listado de todas las prendas
-2024-06-14 20:54:31,369 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-5] Listado de todas las prendas
-2024-06-14 20:54:39,654 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-6] Borramos la prenda por id: 1
-2024-06-14 20:54:53,961 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-7] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:54:55,837 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-8] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:54:56,221 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-9] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:54:56,559 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-10] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:54:57,202 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-1] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:54:57,627 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-2] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:54:58,034 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-3] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:55:04,326 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-4] lista al prenda solicitado
-2024-06-14 20:55:04,327 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-4] Buscamos a la prenda por id: 4
-2024-06-14 20:55:27,278 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-5] Listar todas las prendas paginadas
-2024-06-14 20:55:27,278 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-5] Pageable: Page request [number: 0, size 20, sort: UNSORTED]
-2024-06-14 20:55:27,278 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-5] Listado de todas las prendas por páginas
-2024-06-14 20:55:27,280 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-5] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
-2024-06-14 20:55:27,285 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-5] >>>>> prendas >>>> Page 1 of 1 containing ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda instances
-2024-06-14 20:55:27,286 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-5] >>>>> prendaResponse >>>> Page 1 of 1 containing ar.edu.davinci.dv_ds_20241c_g2.dto.response.PrendaResponse instances
-2024-06-14 20:55:37,154 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-6] Listar todas las prendas paginadas
-2024-06-14 20:55:37,155 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-6] Pageable: Page request [number: 3, size 2, sort: descripcion: ASC]
-2024-06-14 20:55:37,155 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-6] Listado de todas las prendas por páginas
-2024-06-14 20:55:37,155 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-6] Pageable: offset: 6, pageSize: 2 and pageNumber: 3
-2024-06-14 20:55:37,165 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-6] >>>>> prendas >>>> Page 4 of 4 containing ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda instances
-2024-06-14 20:55:37,166 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-6] >>>>> prendaResponse >>>> Page 4 of 4 containing ar.edu.davinci.dv_ds_20241c_g2.dto.response.PrendaResponse instances
-2024-06-14 20:56:58,790 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:56:58,793 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-06-14 20:56:58,799 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2024-06-14 20:57:01,339 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
-2024-06-14 20:57:01,363 INFO o.s.b.StartupInfoLogger [restartedMain] Starting DvDs20241cG2Application using Java 21.0.2 with PID 9596 (C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2\target\classes started by USER in C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2)
-2024-06-14 20:57:01,363 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-14 20:57:01,363 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2024-06-14 20:57:01,391 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-14 20:57:01,391 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-14 20:57:02,112 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-14 20:57:02,171 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 55 ms. Found 6 JPA repository interfaces.
-2024-06-14 20:57:02,805 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8090 (http)
-2024-06-14 20:57:02,814 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:57:02,816 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2024-06-14 20:57:02,816 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-14 20:57:02,855 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-06-14 20:57:02,856 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1464 ms
-2024-06-14 20:57:02,955 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2024-06-14 20:57:03,074 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10f5f238
-2024-06-14 20:57:03,079 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2024-06-14 20:57:03,085 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/dv-ds-20241c-g2'
-2024-06-14 20:57:03,208 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-14 20:57:03,247 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-06-14 20:57:03,278 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
-2024-06-14 20:57:03,460 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-14 20:57:03,485 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-06-14 20:57:03,486 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-06-14 20:57:03,497 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5040e726) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6825e21b)
-2024-06-14 20:57:03,497 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3787a683) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@52a2ad9d)
-2024-06-14 20:57:03,497 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@50c1938) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@42fe16b8)
-2024-06-14 20:57:03,497 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@484703da) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@f4e910a)
-2024-06-14 20:57:03,497 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6aee8c02) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@58971c31)
-2024-06-14 20:57:03,497 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@283e9d2a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@53838fe6)
-2024-06-14 20:57:03,497 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4d138708) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2d857c0f)
-2024-06-14 20:57:03,498 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@710e6358) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3e3d2e20)
-2024-06-14 20:57:03,498 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6f47d528) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6924a9cb)
-2024-06-14 20:57:03,576 WARN o.h.b.m.i.EntityBinder [restartedMain] HHH000457: Joined inheritance hierarchy [ar.edu.davinci.dv_ds_20241c_g2.domain.Venta] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2024-06-14 20:57:04,038 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-06-14 20:57:04,267 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:57:04,564 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-14 20:57:04,719 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
-2024-06-14 20:57:05,322 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2024-06-14 20:57:05,329 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 14 endpoints beneath base path '/actuator'
-2024-06-14 20:57:05,371 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8090"]
-2024-06-14 20:57:05,382 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8090 (http) with context path '/'
-2024-06-14 20:57:05,391 INFO o.s.b.StartupInfoLogger [restartedMain] Started DvDs20241cG2Application in 4.428 seconds (process running for 4.78)
-2024-06-14 20:57:16,893 INFO o.a.j.l.DirectJDKLog [http-nio-8090-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-14 20:57:16,893 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-2] Initializing Servlet 'dispatcherServlet'
-2024-06-14 20:57:16,894 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-2] Completed initialization in 1 ms
-2024-06-14 20:57:16,964 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-2] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:57:17,240 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-3] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:57:17,565 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-4] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:57:17,973 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-5] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:57:18,283 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-6] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:57:18,994 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-7] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:57:19,429 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-8] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:57:19,836 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-9] Grabamos la prenda: Prenda(id=null, descripcion=Camisa Azul Profundo, tipo=CAMISA, precioBase=1000.00)
-2024-06-14 20:57:23,628 ERROR a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-10] No enum constant ar.edu.davinci.dv_ds_20241c_g2.domain.TipoPrenda.Camisa
-2024-06-14 20:57:23,629 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-10] Buscamos a la prenda por id: 1
-2024-06-14 20:57:23,647 INFO a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-10] VA A TIRAR ERROR
-2024-06-14 20:57:23,648 ERROR o.a.j.l.DirectJDKLog [http-nio-8090-exec-10] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "ar.edu.davinci.dv_ds_20241c_g2.domain.Prenda.getDescripcion()" because "prendaNuevo" is null
-	at ar.edu.davinci.dv_ds_20241c_g2.controller.rest.PrendaControllerRest.updatePrenda(PrendaControllerRest.java:223)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-06-14 20:58:17,471 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-2] PRENDA MAPPER RESP: Prenda(id=null, descripcion=Chomba Lacoste, tipo=CAMISA, precioBase=10999.00)
-2024-06-14 20:58:17,471 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-2] Buscamos a la prenda por id: 1
-2024-06-14 20:58:17,473 INFO a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-2] VA A TIRAR ERROR
-2024-06-14 20:58:17,473 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-2] Modificamos la prenda: Prenda(id=1, descripcion=Chomba Lacoste, tipo=CAMISA, precioBase=10999.00)
-2024-06-14 20:58:39,145 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-3] lista al prenda solicitado
-2024-06-14 20:58:39,145 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-3] Buscamos a la prenda por id: 1
-2024-06-14 20:58:39,147 INFO a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-3] VA A TIRAR ERROR
-2024-06-14 20:58:47,198 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-4] PRENDA MAPPER RESP: Prenda(id=null, descripcion=Chomba Piripi, tipo=CAMISA, precioBase=10999.00)
-2024-06-14 20:58:47,198 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-4] Buscamos a la prenda por id: 1
-2024-06-14 20:58:47,200 INFO a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-4] VA A TIRAR ERROR
-2024-06-14 20:58:47,200 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-4] Modificamos la prenda: Prenda(id=1, descripcion=Chomba Piripi, tipo=CAMISA, precioBase=10999.00)
-2024-06-14 20:58:50,052 INFO a.e.d.d.c.r.PrendaControllerRest [http-nio-8090-exec-5] lista al prenda solicitado
-2024-06-14 20:58:50,052 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-5] Buscamos a la prenda por id: 1
-2024-06-14 20:58:50,054 INFO a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-5] VA A TIRAR ERROR
-2024-06-14 20:58:55,391 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-14 20:58:55,394 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2024-06-14 20:58:55,400 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-18 21:47:05,876 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 21:47:05,879 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-18 21:47:05,885 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-18 21:47:07,463 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 21:47:07,490 INFO o.s.b.StartupInfoLogger [restartedMain] Starting DvDs20241cG2Application using Java 21.0.2 with PID 185760 (C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2\target\classes started by USER in C:\Users\USER\Downloads\dv-ds-20241c-g2\dv-ds-20241c-g2)
+2024-06-18 21:47:07,490 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-18 21:47:07,490 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-06-18 21:47:07,518 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-18 21:47:07,518 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-18 21:47:08,178 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 21:47:08,234 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 51 ms. Found 6 JPA repository interfaces.
+2024-06-18 21:47:08,839 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8090 (http)
+2024-06-18 21:47:08,848 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8090"]
+2024-06-18 21:47:08,850 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-06-18 21:47:08,850 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-18 21:47:08,887 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-06-18 21:47:08,888 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1368 ms
+2024-06-18 21:47:08,977 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-06-18 21:47:09,098 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a50cf14
+2024-06-18 21:47:09,100 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-06-18 21:47:09,105 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/dv-ds-20241c-g2'
+2024-06-18 21:47:09,237 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 21:47:09,302 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-18 21:47:09,328 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-06-18 21:47:09,523 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 21:47:09,556 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 21:47:09,557 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-06-18 21:47:09,570 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@14606874) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6610bc79)
+2024-06-18 21:47:09,570 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3654aeab) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6c459134)
+2024-06-18 21:47:09,570 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7bf16700) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1861ef73)
+2024-06-18 21:47:09,570 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@bd33b22) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4bdfd75d)
+2024-06-18 21:47:09,571 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3be67041) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2ceb0a39)
+2024-06-18 21:47:09,571 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3ef33ead) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@b237311)
+2024-06-18 21:47:09,571 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3cf6e4c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@778106ce)
+2024-06-18 21:47:09,571 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@50a058c5) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@400b123b)
+2024-06-18 21:47:09,571 DEBUG o.h.t.d.s.s.DdlTypeRegistry [restartedMain] addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@384ea978) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@47867fc9)
+2024-06-18 21:47:09,671 WARN o.h.b.m.i.EntityBinder [restartedMain] HHH000457: Joined inheritance hierarchy [ar.edu.davinci.dv_ds_20241c_g2.domain.Venta] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2024-06-18 21:47:10,185 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 21:47:10,435 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 21:47:10,775 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 21:47:10,951 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [restartedMain] Adding welcome page template: index
+2024-06-18 21:47:11,553 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-06-18 21:47:11,560 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 14 endpoints beneath base path '/actuator'
+2024-06-18 21:47:11,605 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8090"]
+2024-06-18 21:47:11,617 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8090 (http) with context path '/'
+2024-06-18 21:47:11,626 INFO o.s.b.StartupInfoLogger [restartedMain] Started DvDs20241cG2Application in 4.477 seconds (process running for 4.858)
+2024-06-18 21:47:18,860 INFO o.a.j.l.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-18 21:47:18,861 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-18 21:47:18,862 INFO o.s.w.s.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 1 ms
+2024-06-18 21:47:21,952 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-6] GET - showPrendaPage  - /prendas/list
+2024-06-18 21:47:21,952 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-6] Listado de todas las prendas por páginas
+2024-06-18 21:47:21,955 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-6] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
+2024-06-18 21:47:22,070 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-6] prendas.size: 0
+2024-06-18 21:47:26,804 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-7] GET - showNewPrendaPage - /prendas/new
+2024-06-18 21:47:26,804 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-7] prendas: Prenda(id=null, descripcion=null, tipo=null, precioBase=null)
+2024-06-18 21:47:34,786 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-10] POST - savePrenda - /prendas/save
+2024-06-18 21:47:34,786 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-10] prenda: Prenda(id=null, descripcion=Leo, tipo=SACO, precioBase=1999)
+2024-06-18 21:47:34,786 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-10] Grabamos la prenda: Prenda(id=null, descripcion=Leo, tipo=SACO, precioBase=1999)
+2024-06-18 21:47:34,825 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-1] GET - showPrendaPage  - /prendas/list
+2024-06-18 21:47:34,825 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-1] Listado de todas las prendas por páginas
+2024-06-18 21:47:34,825 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-1] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
+2024-06-18 21:47:34,831 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-1] prendas.size: 1
+2024-06-18 21:47:47,154 INFO a.e.d.d.c.w.HomeController [http-nio-8090-exec-4] GET - viewHomePage - /index
+2024-06-18 21:47:48,638 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-5] GET - showClientePage  - /clientes/list
+2024-06-18 21:47:48,638 DEBUG a.e.d.d.s.i.ClienteServiceImpl [http-nio-8090-exec-5] Listado de todas las clientes por páginas
+2024-06-18 21:47:48,639 DEBUG a.e.d.d.s.i.ClienteServiceImpl [http-nio-8090-exec-5] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
+2024-06-18 21:47:48,642 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-5] clientes.size: 0
+2024-06-18 21:47:50,085 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-8] GET - showNewClientePage - /clientes/new
+2024-06-18 21:47:50,085 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-8] clientes: Cliente(id=null, nombre=null, apellido=null)
+2024-06-18 21:47:55,540 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-9] POST - saveCliente - /clientes/save
+2024-06-18 21:47:55,541 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-9] cliente: Cliente(id=null, nombre=Leo, apellido=Piñeiro)
+2024-06-18 21:47:55,541 DEBUG a.e.d.d.s.i.ClienteServiceImpl [http-nio-8090-exec-9] Grabamos la cliente: Cliente(id=null, nombre=Leo, apellido=Piñeiro)
+2024-06-18 21:47:55,550 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-10] GET - showClientePage  - /clientes/list
+2024-06-18 21:47:55,551 DEBUG a.e.d.d.s.i.ClienteServiceImpl [http-nio-8090-exec-10] Listado de todas las clientes por páginas
+2024-06-18 21:47:55,551 DEBUG a.e.d.d.s.i.ClienteServiceImpl [http-nio-8090-exec-10] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
+2024-06-18 21:47:55,553 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-10] clientes.size: 1
+2024-06-18 21:48:04,042 INFO a.e.d.d.c.w.HomeController [http-nio-8090-exec-3] GET - viewHomePage - /index
+2024-06-18 21:48:05,391 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-4] GET - showPrendaPage  - /prendas/list
+2024-06-18 21:48:05,391 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-4] Listado de todas las prendas por páginas
+2024-06-18 21:48:05,391 DEBUG a.e.d.d.s.i.PrendaServiceImpl [http-nio-8090-exec-4] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
+2024-06-18 21:48:05,394 INFO a.e.d.d.c.w.PrendaController [http-nio-8090-exec-4] prendas.size: 1
+2024-06-18 21:48:08,085 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-5] GET - showClientePage  - /clientes/list
+2024-06-18 21:48:08,085 DEBUG a.e.d.d.s.i.ClienteServiceImpl [http-nio-8090-exec-5] Listado de todas las clientes por páginas
+2024-06-18 21:48:08,085 DEBUG a.e.d.d.s.i.ClienteServiceImpl [http-nio-8090-exec-5] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
+2024-06-18 21:48:08,089 INFO a.e.d.d.c.w.ClienteController [http-nio-8090-exec-5] clientes.size: 1
+2024-06-18 21:48:09,483 INFO a.e.d.d.c.w.VentaController [http-nio-8090-exec-7] GET - showVentaPage  - /ventas/list
+2024-06-18 21:48:09,484 DEBUG a.e.d.d.s.i.VentaServiceImpl [http-nio-8090-exec-7] Listado de todas las ventas por páginas
+2024-06-18 21:48:09,484 DEBUG a.e.d.d.s.i.VentaServiceImpl [http-nio-8090-exec-7] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
+2024-06-18 21:48:09,493 INFO a.e.d.d.c.w.VentaController [http-nio-8090-exec-7] GET - showVentaPage venta importe final: []
+2024-06-18 21:48:09,493 INFO a.e.d.d.c.w.VentaController [http-nio-8090-exec-7] ventas.size: 0
+2024-06-18 21:48:12,094 INFO a.e.d.d.c.w.VentaController [http-nio-8090-exec-9] GET - showNewVentaPage - /ventas/efectivo/new
+2024-06-18 21:48:12,095 INFO a.e.d.d.c.w.VentaController [http-nio-8090-exec-9] ventas: VentaEfectivoCreateRequest(clienteId=null, fecha=18-06-2024)
+2024-06-18 21:48:17,155 INFO a.e.d.d.c.w.VentaController [http-nio-8090-exec-10] POST - saveVenta - /ventas/efectivo/save
+2024-06-18 21:48:17,155 INFO a.e.d.d.c.w.VentaController [http-nio-8090-exec-10] datosVenta: VentaEfectivoCreateRequest(clienteId=1, fecha=18-06-2024)
+2024-06-18 21:48:17,157 DEBUG a.e.d.d.s.i.ClienteServiceImpl [http-nio-8090-exec-10] Buscamos a la cliente por id: 1
+2024-06-18 21:48:17,193 INFO a.e.d.d.c.w.VentaController [http-nio-8090-exec-1] GET - showVentaPage  - /ventas/list
+2024-06-18 21:48:17,194 DEBUG a.e.d.d.s.i.VentaServiceImpl [http-nio-8090-exec-1] Listado de todas las ventas por páginas
+2024-06-18 21:48:17,194 DEBUG a.e.d.d.s.i.VentaServiceImpl [http-nio-8090-exec-1] Pageable: offset: 0, pageSize: 20 and pageNumber: 0
+2024-06-18 21:48:17,203 INFO a.e.d.d.c.w.VentaController [http-nio-8090-exec-1] GET - showVentaPage venta importe final: [VentaEfectivo()]
+2024-06-18 21:48:17,204 INFO a.e.d.d.c.w.VentaController [http-nio-8090-exec-1] ventas.size: 1
+2024-06-18 21:49:00,920 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 21:49:00,922 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-18 21:49:00,930 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

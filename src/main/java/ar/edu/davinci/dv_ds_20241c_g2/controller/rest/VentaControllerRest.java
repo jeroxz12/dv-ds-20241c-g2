@@ -44,6 +44,7 @@ public class VentaControllerRest extends TiendaAppRest{
     /**
      * Listar
      */
+
     @GetMapping(path = "/ventas/all")
     public List<Venta> getListAll() {
         LOGGER.info("listar todas las ventas");
